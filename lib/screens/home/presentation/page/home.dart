@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             Padding(padding: EdgeInsets.only(top: 50)),
             Text(
               "Draft Home",
-              style: CustomTheme.mainTheme.textTheme.title,
+              //  style: CustomTheme.mainTheme.textTheme.titleMedium,
             ),
             Padding(padding: EdgeInsets.only(top: 50)),
             Column(
@@ -90,17 +90,17 @@ class _HomePageState extends State<HomePage> {
               _snackBar.showErrorSnackBar(state.message);
             });
           }
-          return RaisedButton(
-            shape: RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(4.0),
-            ),
-            color: CustomColor.logoBlue,
+          return ElevatedButton(
+            // shape: RoundedRectangleBorder(
+            //   borderRadius: new BorderRadius.circular(4.0),
+            // ),
+            // color: CustomColor.logoBlue,
             onPressed: () {
               BlocProvider.of<LogOutBloc>(context).add(UserLogOutEvent());
             },
             child: Text(
               "SIGN OUT",
-              style: CustomTheme.mainTheme.textTheme.button,
+              // style: CustomTheme.mainTheme.textTheme.button,
             ),
           );
         } else if (state is LoadingState) {
@@ -115,19 +115,19 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  RaisedButton _buildChangePasswordButton() {
-    return RaisedButton(
+  ElevatedButton _buildChangePasswordButton() {
+    return ElevatedButton(
       key: Key("changePassword"),
-      shape: RoundedRectangleBorder(
-        borderRadius: new BorderRadius.circular(4.0),
-      ),
-      color: CustomColor.logoBlue,
+      // shape: RoundedRectangleBorder(
+      //   borderRadius: new BorderRadius.circular(4.0),
+      // ),
+      // color: CustomColor.logoBlue,
       onPressed: () {
         Navigator.pushNamed(context, CHANGE_PASSWORD_ROUTE);
       },
       child: Text(
         "CHANGE PASSWORD",
-        style: CustomTheme.mainTheme.textTheme.button,
+        // style: CustomTheme.mainTheme.textTheme.button,
       ),
     );
   }

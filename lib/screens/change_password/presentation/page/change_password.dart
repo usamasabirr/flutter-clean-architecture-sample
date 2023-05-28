@@ -65,12 +65,12 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
         ),
         appBar: AppBar(
           iconTheme: CustomTheme.mainTheme.iconTheme,
-          textTheme: CustomTheme.mainTheme.textTheme,
+          //textTheme: CustomTheme.mainTheme.textTheme,
           backgroundColor: CustomColor.white,
           centerTitle: true,
           title: Text(
             "Change Password",
-            style: CustomTheme.mainTheme.textTheme.headline,
+            // style: CustomTheme.mainTheme.textTheme.headlineMedium,
           ),
           brightness: Brightness.light,
         ),
@@ -150,12 +150,12 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
       },
       builder: (context, state) {
         if (state is InitialState) {
-          return RaisedButton(
+          return ElevatedButton(
             key: Key("changePassword"),
-            shape: RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(4.0),
-            ),
-            color: CustomColor.logoBlue,
+            // shape: RoundedRectangleBorder(
+            //   borderRadius: new BorderRadius.circular(4.0),
+            // ),
+            // color: CustomColor.logoBlue,
             onPressed: () {
               if (_oldPasswordController.text.isNotEmpty &&
                   _passwordController.text.isNotEmpty &&
@@ -179,7 +179,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
             },
             child: Text(
               "CHANGE PASSWORD",
-              style: CustomTheme.mainTheme.textTheme.button,
+              // style: CustomTheme.mainTheme.textTheme.button,
             ),
           );
         } else if (state is LoadingState) {
@@ -236,7 +236,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
         fillColor: CustomColor.textFieldBackground,
         filled: true,
         labelText: labelText,
-        labelStyle: CustomTheme.mainTheme.textTheme.body2,
+        //labelStyle: CustomTheme.mainTheme.textTheme.bodyMedium,
         suffixIcon: IconButton(
           icon: Icon(Icons.remove_red_eye),
           color: CustomColor.hintColor,

@@ -30,7 +30,7 @@ class CustomSnackBar {
       backgroundColor: Colors.green[400],
       duration: Duration(minutes: 1),
     );
-    _state?.showSnackBar(snackBar);
+    // _state?.showSnackBar(snackBar);
   }
 
   void showSnackBar({
@@ -53,14 +53,14 @@ class CustomSnackBar {
           ? SnackBarAction(
               label: "Clear",
               textColor: Colors.black,
-              onPressed: () => _state.removeCurrentSnackBar(),
+              // onPressed: () => _state.removeCurrentSnackBar(),
             )
           : null,
     );
-    _state?.showSnackBar(snackBar);
+    // _state?.showSnackBar(snackBar);
   }
 
   void hideAll() {
-    _state?.removeCurrentSnackBar();
+    //  _state?.removeCurrentSnackBar();
   }
 }

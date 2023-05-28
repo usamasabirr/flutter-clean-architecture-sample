@@ -123,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           Text(
             "Login",
-            style: CustomTheme.mainTheme.textTheme.title,
+            //style: CustomTheme.mainTheme.textTheme.titleMedium,
           ),
           Padding(
             padding: EdgeInsets.only(top: 14),
@@ -153,12 +153,12 @@ class _LoginPageState extends State<LoginPage> {
               _snackBar.showErrorSnackBar(state.message);
             });
           }
-          return RaisedButton(
+          return ElevatedButton(
             key: Key("login"),
-            shape: RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(4.0),
-            ),
-            color: CustomColor.logoBlue,
+            // shape: RoundedRectangleBorder(
+            //   borderRadius: new BorderRadius.circular(4.0),
+            // ),
+            // color: CustomColor.logoBlue,
             onPressed: () {
               BlocProvider.of<UserLoginBloc>(context).add(
                 LoginEvent(
@@ -169,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
             },
             child: Text(
               "LOGIN",
-              style: CustomTheme.mainTheme.textTheme.button,
+              // style: CustomTheme.mainTheme.textTheme.button,
             ),
           );
         } else if (state is LoadingState) {
@@ -201,12 +201,12 @@ class _LoginPageState extends State<LoginPage> {
               _snackBar.showErrorSnackBar(state.message);
             });
           }
-          return RaisedButton(
+          return ElevatedButton(
             key: Key("skipLogin"),
-            shape: RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(4.0),
-            ),
-            color: CustomColor.logoBlue,
+            // shape: RoundedRectangleBorder(
+            //   borderRadius: new BorderRadius.circular(4.0),
+            // ),
+            // color: CustomColor.logoBlue,
             onPressed: () {
               BlocProvider.of<UserLoginBloc>(context).add(
                 SkipLoginEvent(),
@@ -214,7 +214,7 @@ class _LoginPageState extends State<LoginPage> {
             },
             child: Text(
               "SKIP LOGIN",
-              style: CustomTheme.mainTheme.textTheme.button,
+              //  style: CustomTheme.mainTheme.textTheme.button,
             ),
           );
         } else if (state is LoadingState) {
@@ -258,7 +258,7 @@ class _LoginPageState extends State<LoginPage> {
         fillColor: CustomColor.textFieldBackground,
         filled: true,
         labelText: "Email*",
-        labelStyle: CustomTheme.mainTheme.textTheme.body2,
+        // labelStyle: CustomTheme.mainTheme.textTheme.bodySmall,
       ),
       cursorColor: CustomColor.hintColor,
       onFieldSubmitted: (term) {
@@ -297,7 +297,7 @@ class _LoginPageState extends State<LoginPage> {
         fillColor: CustomColor.textFieldBackground,
         filled: true,
         labelText: "Password*",
-        labelStyle: CustomTheme.mainTheme.textTheme.body2,
+        // labelStyle: CustomTheme.mainTheme.textTheme.bodySmall,
         suffixIcon: IconButton(
           icon: Icon(Icons.remove_red_eye),
           color: CustomColor.hintColor,

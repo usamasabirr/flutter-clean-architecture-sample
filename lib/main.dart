@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:clean_architecture_with_bloc_app/core/utils/constants.dart';
 import 'package:clean_architecture_with_bloc_app/core/utils/theme.dart';
 import 'package:logging/logging.dart';
-import 'core/utils/router.dart';
+import 'core/utils/router.dart' as router;
 import 'injection_container.dart' as di; //Dependency injector
 
 void main() async {
@@ -21,7 +21,7 @@ class CleanArchitectureWithBloc extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'clean architecture with bloc',
       theme: CustomTheme.mainTheme,
-      onGenerateRoute: Router.generateRoute,
+      onGenerateRoute: router.Router.generateRoute,
       initialRoute: LOGIN_ROUTE,
     );
   }
